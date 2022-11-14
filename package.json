@@ -23,7 +23,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.cjs.json && tsc -p tsconfig.esm.json",
     "test": "jest",
-    "test-ci": "jest --coverage --ci --reporters=default --reporters=jest-junit"
+    "ci-test": "jest --coverage --ci --reporters=default --reporters=jest-junit"
   },
   "devDependencies": {
     "@types/jest": "^29.2.2",
