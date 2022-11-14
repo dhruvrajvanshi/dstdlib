@@ -1,4 +1,4 @@
-import { cast, StreamM, ValueOf } from './index'
+import { cast, IterM, ValueOf } from './index'
 
 export function* entries<T extends object>(
   obj: T
@@ -9,9 +9,9 @@ export function* entries<T extends object>(
 }
 
 export function keys<T extends object>(obj: T): IterableIterator<keyof T> {
-  return StreamM.map(entries(obj), ([key]) => key)
+  return IterM.map(entries(obj), ([key]) => key)
 }
 
 export function values<T extends object>(obj: T): IterableIterator<ValueOf<T>> {
-  return StreamM.map(entries(obj), ([_, value]) => value)
+  return IterM.map(entries(obj), ([_, value]) => value)
 }
