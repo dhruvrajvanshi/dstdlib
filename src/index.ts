@@ -9,8 +9,9 @@ export function cast<T>(value: unknown): T {
 
 export type Predicate<T> = (value: T) => boolean
 
-export * as StreamM from './Stream'
-export { Stream } from './Stream'
+export * as IterM from './Iter'
+export { Iter } from './Iter'
+
 export * as ObjM from './Obj'
 
 export * as ArrM from './Arr'
