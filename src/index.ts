@@ -3,6 +3,15 @@ export type RO<T> = Readonly<T>
 export type KeyOf<T> = keyof T
 export type ValueOf<T> = T[keyof T]
 
+export type Primitive =
+  | string
+  | number
+  | bigint
+  | boolean
+  | undefined
+  | symbol
+  | null
+
 export function cast<T>(value: unknown): T {
   return value as T
 }
