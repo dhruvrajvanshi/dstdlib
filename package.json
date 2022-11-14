@@ -1,6 +1,6 @@
 {
   "name": "dstdlib",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A standard library for typescript",
   "repository": "https://github.com/dhruvrajvanshi/dstdlib",
   "author": "Dhruv Rajvanshi <dhruvrajvanshi@outlook.com>",
@@ -14,7 +14,8 @@
     }
   },
   "files": [
-    "build"
+    "build",
+    "src"
   ],
   "main": "build/cjs/index.js",
   "types": "build/esm/index.d.ts",
