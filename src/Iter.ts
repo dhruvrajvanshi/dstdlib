@@ -1,4 +1,4 @@
-import { MutArr, Predicate } from './index'
+import { Arr, MutArr, Predicate, Primitive, RO } from './index'
 
 export type Iter<T> = Iterable<T>
 export type Iterator<T> = IterableIterator<T>
@@ -21,6 +21,21 @@ export function toMutArr<T>(self: Iter<T>): MutArr<T> {
   const result: MutArr<T> = []
   for (const item of self) {
     result.push(item)
+  }
+  return result
+}
+
+export function groupBy<T, Key extends Primitive>(
+  self: Iter<RO<T>>,
+  property: (value: T) => Key
+): Map<Key, Arr<T>> {
+  const result = new Map<Key, MutArr<T>>()
+  for (const item of self) {
+    const key = property(item)
+    if (!result.has(key)) {
+      result.set(key, [])
+    }
+    result.get(key)?.push(item)
   }
   return result
 }
