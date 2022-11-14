@@ -1,6 +1,6 @@
 {
-  "name": "dstdlib",
-  "version": "1.0.0",
+  "name": "@rajv.dev/dstdlib",
+  "version": "0.0.1",
   "description": "A standard library for typescript",
   "repository": "https://github.com/dhruvrajvanshi/dstdlib",
   "author": "Dhruv Rajvanshi <dhruvrajvanshi@outlook.com>",
