@@ -1,0 +1,7 @@
+{
+    "arrowParens": "always",
+    "singleQuote": true,
+    "parser": "typescript",
+    "endOfLine": "lf",
+    "semi": false
+}
