@@ -29,7 +29,3 @@ jobs:
     - run: yarn
     - run: yarn test
     - run: yarn build
-    - run: echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
-      env:
-        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-    - run: yarn publish
