@@ -1,6 +1,6 @@
-import { MutArr, Predicate } from './index'
+import { MutArr, Predicate, StreamM } from './index'
 
-export type Stream<T> = IterableIterator<T>
+export type Stream<T> = Iterable<T>
 
 export function* map<T, U>(self: Stream<T>, f: (value: T) => U): Stream<U> {
   for (const item of self) {
