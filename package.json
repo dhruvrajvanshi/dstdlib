@@ -1,14 +1,11 @@
 {
   "name": "dstdlib",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A standard library for typescript",
   "repository": "https://github.com/dhruvrajvanshi/dstdlib",
   "author": "Dhruv Rajvanshi <dhruvrajvanshi@outlook.com>",
   "license": "MIT",
   "type": "module",
-  "main": "build/cjs/index.js",
-  "types": "build/esm/index.d.ts",
-  "module": "build/esm",
   "exports": {
     ".": {
       "types": "./build/esm/index.d.ts",
@@ -16,6 +13,8 @@
       "require": "./build/cjs/index.d.ts"
     }
   },
+  "main": "build/cjs/index.js",
+  "types": "build/esm/index.d.ts",
   "private": false,
   "scripts": {
     "build": "tsc -p tsconfig.cjs.json && tsc -p tsconfig.esm.json",
