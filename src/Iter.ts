@@ -47,7 +47,7 @@ export function* range(start: number, end: number): Iterator<number> {
 }
 
 export function* repeat<T>(value: T, times: number): Iterator<T> {
-  for (const _ in range(0, times)) {
+  for (const _ of range(0, times)) {
     yield value
   }
 }
