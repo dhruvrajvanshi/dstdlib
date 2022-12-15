@@ -39,3 +39,15 @@ export function groupBy<T, Key extends Primitive>(
   }
   return result
 }
+
+export function* range(start: number, end: number): Iterator<number> {
+  for (let i = start; i < end; i++) {
+    yield i
+  }
+}
+
+export function* repeat<T>(value: T, times: number): Iterator<T> {
+  for (const _ in range(0, times)) {
+    yield value
+  }
+}
